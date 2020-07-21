@@ -1,0 +1,43 @@
+<!-- 题目类型标签 -->
+<view class="margin-top text-center">
+  <view class="cu-tag radius">{{question_info[question_pageNo].questionType}}</view>
+</view>
+<view class='bg-white padding-xs radius shadow-lg margin-lr-lg a_css'>
+  <view class='padding-top-sm text-center text-lg text-black q_css'>
+   {{question_pageNo+1}}. {{question_info[question_pageNo].name}}
+  </view>
+  <radio-group class="block">
+      <view class="cu-form-group">
+        <radio class="blue radio">
+            <text>水水水水色谔谔</text>
+        </radio>
+      </view>
+      <view class="cu-form-group">
+        <radio class="blue radio">
+            <text>水水水水色谔谔</text>
+        </radio>
+      </view>
+      <view class="cu-form-group">
+        <radio class="blue radio">
+            <text>水水水水色谔谔</text>
+        </radio>
+      </view>
+      <view class="cu-form-group">
+        <radio class="blue radio">
+            <text>水水水水色谔谔</text>
+        </radio>
+      </view>
+      <view class="cu-form-group">
+        <radio class="blue radio">
+            <text>水水水水色谔谔</text>
+        </radio>
+      </view>
+  </radio-group>
+  <view class='text-center margin-tb text-lg text-black'>{{question_pageNo+1}} / {{question_info.length}}</view>
+</view>
+<!--上一题下一题按钮 -->
+<view class="padding flex flex-direction">
+  <button class="cu-btn lg" wx:if="{{question_pageNo != 0}}">上一题</button>
+  <button class="cu-btn margin-tb-sm lg">下一题</button>
+</view>
+

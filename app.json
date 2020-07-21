@@ -1,0 +1,82 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/essay/essay",
+    "pages/exam/exam",
+    "pages/me/me"
+  ],
+  "subpackages": [
+    {
+      "root": "subIndex",
+      "pages": [
+        "show/show"
+      ]
+    },
+    {
+      "root":"subMe",
+      "pages": [
+        "userinfo/userinfo",
+        "msg/msg"
+      ]
+    },
+    {
+      "root": "subEssay",
+      "pages": [
+        "show/show"
+      ]
+    },
+    {
+      "root": "subExam",
+      "pages": [
+        "aq/aq",
+        "result/result",
+        "history/history"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FFC125",
+    "navigationBarTitleText": "suichen",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#FFC125"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "height": "100px",
+    "fontSize": "10px",
+    "iconWidth": "34px",
+    "spacing": "5px",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "static/tabBar_img/home.png",
+        "selectedIconPath": "static/tabBar_img/home_active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/essay/essay",
+        "iconPath": "static/tabBar_img/home.png",
+        "selectedIconPath": "static/tabBar_img/home_active.png",
+        "text": "文章"
+      },
+      {
+        "pagePath": "pages/exam/exam",
+        "iconPath": "static/tabBar_img/home.png",
+        "selectedIconPath": "static/tabBar_img/home_active.png",
+        "text": "面试"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "iconPath": "static/tabBar_img/me.png",
+        "selectedIconPath": "static/tabBar_img/me_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

@@ -1,0 +1,62 @@
+<view class="box">
+  <!--top搜索-->
+  <view class="cu-bar search bg-yellow">
+    <view class="search-form round">
+      <text class="cuIcon-search"></text>
+      <input type="text" placeholder="搜索图片、文章、视频" confirm-type="search"></input>
+    </view>
+    <button size="mini" class="cu-btn round bg-gradual-green shadow-blur">搜索</button>
+  </view>
+  <!--轮播图-->
+  <swiper class="screen-swiper square-dot" indicator-dots="true" circular="true" autoplay="true" interval="5000" duration="500">
+      <swiper-item wx:for="{{swiperList}}" wx:key="index">
+        <image src="{{item.url}}" mode="aspectFill" wx:if="{{item.type=='image'}}"></image>
+        <video src="{{item.url}}" autoplay loop muted show-play-btn="{{false}}" controls="{{false}}" objectFit="cover" wx:if="{{item.type=='video'}}"></video>
+      </swiper-item>
+  </swiper>
+  <!-- 滚动通知 -->
+  <view class="cu-bar bg-white solid-bottom">
+    <view class="action">
+      <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+        <block wx:for="{{msgList}}">
+            <swiper-item>
+              <text class="cuIcon-title text-blue swiper_item">{{item.title}}</text>
+            </swiper-item>
+        </block>
+      </swiper>
+    </view>
+  </view>
+  <!--学习手册-->
+  <scroll-view>
+    <view class="cu-bar bg-white solid-bottom">
+      <view class="action">
+        <text class="cuIcon-titles text-green"></text>
+        <text class="text-xl text-bold">学习手册</text>
+      </view>
+    </view>
+    <view class="{{['cu-list grid','col-3','no-border']}}">
+      <block wx:for="{{cuIconList}}" wx:for-item="item" wx:for-index="index" wx:key="index">
+        <view class="cu-item" bindtap="toshow" data-src="{{item.file_src}}">
+          <view class="{{['cuIcon-'+item.cuIcon,'text-'+item.color]}}"></view>
+          <text>{{item.name}}</text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <!--其他-->
+  <scroll-view>
+    <view class="cu-bar bg-white solid-bottom">
+      <view class="action">
+        <text class="cuIcon-titles text-green"></text>
+        <text class="text-xl text-bold">其他</text>
+      </view>
+    </view>
+   <view class="cu-card bg-white">
+    <block wx:for="{{cardlist}}" wx:for-item="item" wx:for-index="index" wx:key="index" >
+      <view class="cu-item bg-img shadow-blur" style="{{'background-image:'+('url('+item.img+')')+';'}}" bindtap="nofinish">
+        <view class="cardTitle">{{''+item.title+''}}</view>
+      </view>
+    </block>
+  </view>
+  </scroll-view>
+</view>
