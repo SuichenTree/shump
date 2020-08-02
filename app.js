@@ -20,7 +20,12 @@ App({
     })
   },
   globalData: {
+    //小程序版本号
+    version:"v0.56",
     userInfo: null,
+    //用户的openId和unionId
+    openId:null,
+    unionId:null,
     // current_server: "https://localhost:9090",
 		current_server:"https://www.suichen.xyz:9090",
   },

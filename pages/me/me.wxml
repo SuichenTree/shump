@@ -71,13 +71,15 @@
       </button>
     </view>
     <view class="cu-item">
-      <view class="content">
-        <text class="cuIcon-warn text-green"></text>
-        <text class="text-grey">版本号</text>
-      </view>
-      <view class="action">
-        <text class="text-grey text-lg">0.5</text>
-      </view>
+      <button class="cu-btn content" bindtap="updateSubscription">
+        <view class="content">
+          <text class="cuIcon-warn text-green"></text>
+          <text class="text-grey">版本号</text>
+        </view>
+        <view class="action">
+          <text class="text-grey text-lg">{{versionNumber}}</text>
+        </view>
+      </button>
     </view>
   </view>
 </scroll-view>

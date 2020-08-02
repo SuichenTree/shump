@@ -142,6 +142,8 @@ Page({
                       success: function (res) {
                         console.log("初始化用户信息接口调用成功,该用户的userId =" + res.data.userId);
                         getApp().globalData.userInfo.userId = res.data.userId;
+                        getApp().globalData.openId = res.data.openId;
+                        getApp().globalData.unionId = res.data.unionId;
                       }, fail: function (res) {
                         console.log("初始化用户信息接口调用失败");
                       }
